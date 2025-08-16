@@ -18,11 +18,11 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User createUser(User user) {
+    public void createUser(User user) {
         if (userRepository.findByUsername(user.getUsername()) != null) {
             throw new RuntimeException("Username already exists");
         }
-        return userRepository.save(user);
+        userRepository.save(user);
     }
 
     public Optional<User> getUserById(Long id) {

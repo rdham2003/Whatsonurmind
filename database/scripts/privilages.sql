@@ -1,0 +1,4 @@
+-- STOP POSTGRE FROM CRYING
+
+GRANT ALL PRIVILEGES ON TABLE table TO postgreusername;
+GRANT ALL PRIVILEGES ON SEQUENCE users_id_seq TO postgreusername;
